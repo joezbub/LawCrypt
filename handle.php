@@ -21,7 +21,7 @@
             exec("./main -encrypt '$target_file'");
             //echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
             $file_suff = substr($_FILES["fileToUpload"]["name"], 0, strrpos($_FILES["fileToUpload"]["name"], '.', -1));
-            $split_src = "/Users/josephz/downloads/programming/attorney_secret_sharing/joezbub.github.io/uploads/";
+            $split_src = "/Users/josephz/downloads/programming/attorney_secret_sharing/lawcrypt.github.io/uploads/";
             $tmp = $split_src . $file_suff . "-key-1.dat";
             shell_exec("mv $tmp /Users/josephz/Dropbox/Lawyer_Data/");
             $tmp = $split_src . $file_suff . "-key-2.dat";

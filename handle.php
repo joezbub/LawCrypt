@@ -22,19 +22,19 @@
             //echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
             $file_suff = substr($_FILES["fileToUpload"]["name"], 0, strrpos($_FILES["fileToUpload"]["name"], '.', -1));
             $split_src = "/Users/josephz/downloads/programming/attorney_secret_sharing/lawcrypt.github.io/uploads/";
-            $tmp = $split_src . $file_suff . "-key-1.dat";
+            $tmp = $split_src . $file_suff . "-key-1.txt";
             shell_exec("mv $tmp /Users/josephz/Dropbox/Lawyer_Data/");
-            $tmp = $split_src . $file_suff . "-key-2.dat";
+            $tmp = $split_src . $file_suff . "-key-2.txt";
             shell_exec("mv $tmp /Users/josephz/GoogleDrive/Lawyer_Data/");
-            $tmp = $split_src . $file_suff . "-key-3.dat";
+            $tmp = $split_src . $file_suff . "-key-3.txt";
             shell_exec("mv $tmp /Users/josephz/OneDrive/Lawyer_Data/");
 
-            $tmp = $split_src . $file_suff . "-split-1.dat";
+            $tmp = $split_src . $file_suff . "-split-1.txt";
             shell_exec("mv $tmp /Users/josephz/Dropbox/Lawyer_Data/");
-            $tmp = $split_src . $file_suff . "-split-2.dat";
+            $tmp = $split_src . $file_suff . "-split-2.txt";
             shell_exec("mv $tmp /Users/josephz/GoogleDrive/Lawyer_Data/");
-            $tmp = $split_src . $file_suff . "-split-3.dat";
-            shell_exec("mv $tmp /Users/josephz/OneDrive/Lawyer_Data/");
+            $tmp = $split_src . $file_suff . "-split-3.txt";
+            shell_exec("mv $tmp /Users/josephz/OneDrive/Lawyer_Data/");                
             header("Location: split.html");
             include("split.html");
         } 
